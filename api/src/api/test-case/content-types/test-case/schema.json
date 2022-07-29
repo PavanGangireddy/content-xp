@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_cases",
+  "info": {
+    "singularName": "test-case",
+    "pluralName": "test-cases",
+    "displayName": "testCase"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "testCaseId": {
+      "type": "uid"
+    },
+    "displayText": {
+      "type": "text"
+    },
+    "testCaseEvaluationType": {
+      "type": "enumeration",
+      "enum": [
+        "CLIENT_SIDE_EVALUATION",
+        "CSS_PARSER",
+        "JS_PARSER"
+      ],
+      "default": "CLIENT_SIDE_EVALUATION",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "min": 1
+    },
+    "criteria": {
+      "type": "richtext",
+      "required": true
+    },
+    "weightage": {
+      "type": "integer"
+    }
+  }
+}

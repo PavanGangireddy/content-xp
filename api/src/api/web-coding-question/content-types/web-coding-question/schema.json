@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_coding_questions",
+  "info": {
+    "singularName": "web-coding-question",
+    "pluralName": "web-coding-questions",
+    "displayName": "WebCodingQuestion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questionId": {
+      "type": "uid"
+    },
+    "shortText": {
+      "type": "string",
+      "required": true
+    },
+    "contentType": {
+      "type": "enumeration",
+      "enum": [
+        "MARKDOWN"
+      ],
+      "default": "MARKDOWN",
+      "required": true
+    },
+    "questionType": {
+      "type": "enumeration",
+      "enum": [
+        "HTML_CODING"
+      ],
+      "default": "HTML_CODING",
+      "required": true
+    },
+    "toughness": {
+      "type": "enumeration",
+      "enum": [
+        "EASY",
+        "MEDIUM",
+        "HARD"
+      ],
+      "default": "EASY",
+      "required": true
+    },
+    "solutionsMetadata": {
+      "type": "component",
+      "repeatable": true,
+      "component": "coding-question.solution-metadata"
+    },
+    "testCases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::test-case.test-case"
+    }
+  }
+}

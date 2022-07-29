@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_coding_question_solution_metadata",
+  "info": {
+    "displayName": "solutionMetadata",
+    "icon": "air-freshener",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "coding-question.title-and-content-type"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "coding-question.title-and-content-type"
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "default": 1
+    }
+  }
+}
